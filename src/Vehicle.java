@@ -25,21 +25,17 @@ class Electric extends Vehicle{
 }
 
 class pickUpTruck extends Vehicle{
-    public
-
-
+    public float towingCap;
+    public float truckBedCap;
+    public int torque;
 }
 
 class Van extends Vehicle{
-
-
-
+    public boolean hasExtraSeats;
 }
 
 class offRoad extends Vehicle{
-
-
-
+    public String approachAngle;
 }
 
 
