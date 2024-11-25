@@ -9,7 +9,6 @@
 
 
 # Git Workflow
-One feature, one PR.
 
 1. Make a new feature branch based on your master branch: `git checkout master`, `git checkout -b <branch-name>`
 2. After finishing new features, add and commit them: `git add .`, `git commit -m <commit_msg>`
