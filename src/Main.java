@@ -3,7 +3,5 @@ public class Main {
         System.out.println("Hello");
 
 
-        System.out.println("8==D");
-        System.out.println("8============D");
     }
 }
