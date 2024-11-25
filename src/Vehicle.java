@@ -15,4 +15,33 @@ public class Vehicle {
     public boolean hasFuel;
 }
 
+class Sedan extends Vehicle{
+    public boolean offRoadCap;
+}
+
+class Electric extends Vehicle{
+    public float batteryCap;
+    public float chargeTime;
+}
+
+class pickUpTruck extends Vehicle{
+    public
+
+
+}
+
+class Van extends Vehicle{
+
+
+
+}
+
+class offRoad extends Vehicle{
+
+
+
+}
+
+
+
 
