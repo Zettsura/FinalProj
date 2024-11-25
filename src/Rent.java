@@ -14,10 +14,10 @@ public class Rent {
 
     }
 
-    public boolean checkAvailVehicle(){
-        if(vehicleList == vehicleList)
+    public boolean checkAvailVehicle(Vehicle vehicleList){
+        if(!(vehicleList != vehicleList)) {
             return true;
-        else
+        } else
             return false;
     }
 
