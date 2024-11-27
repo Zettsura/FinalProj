@@ -12,7 +12,7 @@ public class Vehicle {
     public int passLim;
     public float mileageLim;
     public float basePrice;
-    public boolean isRented;
+    public static boolean isRented;
     public boolean hasTintedWindows;
     public boolean hasFuel;
 }
