@@ -9,10 +9,10 @@ interface rent{
 
 
 public class Vehicle {
-    public long vehicleId;      // Id ng shop
-    public String carModel;     //brand
+    public long vehicleId;           // Id ng shop
+    public String carModel;          //brand
     public String modelId;
-    public String color;        // Red, White, Blue, Yellow, Black, Pink, Green
+    public String color;             // Red, White, Blue, Yellow, Black, Pink, Green
     public String fuelType;
     public boolean isAutomatic;
     public int passLim;
