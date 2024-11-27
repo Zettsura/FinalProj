@@ -7,7 +7,7 @@ public class pickUpTruck extends Vehicle implements rent{
     public int storageLim;
 
     @Override
-    public void calcRent(Vehicle car, double basePrice) {
+    public void calcRent(Vehicle car) {
         
     }
 }

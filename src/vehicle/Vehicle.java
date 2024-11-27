@@ -4,7 +4,7 @@ interface payment{
 
 }
 interface rent{
-    public void calcRent(Vehicle car, double basePrice);
+    public void calcRent(Vehicle car);
 }
 
 
@@ -13,12 +13,12 @@ public class Vehicle {
     public String carModel;     //brand
     public String modelId;
     public String color;        // Red, White, Blue, Yellow, Black, Pink, Green
-    public String fuelType;
+    public String fuelType;     // Diesel, Unleaded, High Octane
     public boolean isAutomatic;
     public int passLim;
     public double mileageLim;
-    public static double basePrice;
-    public static boolean isRented;
+    public double basePrice;
+    public boolean isRented;
 
     public Vehicle() {
     }
@@ -102,12 +102,12 @@ public class Vehicle {
         return basePrice;
     }
 
-    public static boolean isIsRented() {
+    public boolean isIsRented() {
         return isRented;
     }
 
-    public static void setIsRented(boolean isRented) {
-        Vehicle.isRented = isRented;
+    public void setIsRented(boolean isRented) {
+        this.isRented = isRented;
     }
 }
 
