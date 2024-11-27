@@ -3,6 +3,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .gradle
+build.gradle
 build
 FinalProj.iws
 FinalProj.ipr
