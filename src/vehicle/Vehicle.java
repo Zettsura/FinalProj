@@ -1,20 +1,20 @@
 package vehicle;
+
 interface payment{
 
 }
 interface rent{
-    public void calcRent(double basePrice);
+    public void calcRent(Vehicle car, double basePrice);
 }
 
 
 public class Vehicle {
     public long vehicleId;      // Id ng shop
     public String carModel;     //brand
-    public String carType;      //suv, electric, etc
+    public String modelId;
     public String color;        // Red, White, Blue, Yellow, Black, Pink, Green
     public String fuelType;
     public boolean isAutomatic;
-    public int modelId;
     public int passLim;
     public double mileageLim;
     public static double basePrice;
@@ -23,10 +23,9 @@ public class Vehicle {
     public Vehicle() {
     }
 
-    public Vehicle(long vehicleId, String carModel, String carType, String color, String fuelType, boolean isAutomatic, int modelId, int passLim, float mileageLim) {
+    public Vehicle(long vehicleId, String carModel, String color, String fuelType, boolean isAutomatic, String modelId, int passLim, float mileageLim) {
         this.vehicleId = vehicleId;
         this.carModel = carModel;
-        this.carType = carType;
         this.color = color;
         this.fuelType = fuelType;
         this.isAutomatic = isAutomatic;
@@ -49,14 +48,6 @@ public class Vehicle {
 
     public void setCarModel(String carModel) {
         this.carModel = carModel;
-    }
-
-    public String getCarType() {
-        return carType;
-    }
-
-    public void setCarType(String carType) {
-        this.carType = carType;
     }
 
     public String getColor() {
@@ -83,11 +74,11 @@ public class Vehicle {
         this.isAutomatic = transType;
     }
 
-    public int getModelId() {
+    public String getModelId() {
         return modelId;
     }
 
-    public void setModelId(int modelId) {
+    public void setModelId(String modelId) {
         this.modelId = modelId;
     }
 
@@ -120,22 +111,3 @@ public class Vehicle {
     }
 }
 
-//class Electric extends Vehicle implements rent{
-//    public double batteryCap;
-//    public double chargeTime;
-//}
-//
-//class pickUpTruck extends Vehicle implements rent{
-//    public double towingCap;
-//    public double truckBedCap;
-//    public int torque;
-//    public int storageLim;
-//}
-//
-//class Van extends Vehicle implements rent{
-//    public boolean hasExtraSeats;
-//}
-//
-//class offRoad extends Vehicle implements rent{
-//    public String approachAngle;
-//}
