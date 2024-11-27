@@ -1,4 +1,8 @@
+package rent;
+
 import java.util.ArrayList;
+
+import vehicle.*;
 
 public class Rent {
     private ArrayList<Vehicle> vehicleList = new ArrayList<>();

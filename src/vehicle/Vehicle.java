@@ -1,3 +1,5 @@
+package vehicle;
+
 public class Vehicle {
     public long vehicleId;
     public String carModel;
