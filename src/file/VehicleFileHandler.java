@@ -3,8 +3,10 @@ package file;
 import vehicle.Vehicle;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.BufferedReader;
 import java.util.ArrayList;
 
 // TODO: add explicit throw if file operation fails
@@ -27,7 +29,17 @@ public class VehicleFileHandler extends FileManager {
         String test = "tes\nt";
         try (FileWriter fw = new FileWriter(vehicleListFile, true);){
             fw.write(
-                    ""
+                "vehicleId: "       + vehicle.vehicleId     + ",\n"
+                + "carModel: "      + vehicle.carModel      + ",\n"
+                + "modelId: "       + vehicle.modelId       + ",\n"
+                + "color: "         + vehicle.color         + ",\n"
+                + "fuelType: "      + vehicle.fuelType      + ",\n"
+                + "isAutomatic: "   + vehicle.isAutomatic   + ",\n"
+                + "passLim: "       + vehicle.passLim       + ",\n"
+                + "mileageLim: "    + vehicle.mileageLim    + ",\n"
+                + "basePrice: "     + vehicle.basePrice     + ",\n"
+                + "isRented: "      + vehicle.isRented      + ",\n"
+                + "\n"
             );
 
         } catch (IOException e) {
@@ -35,7 +47,29 @@ public class VehicleFileHandler extends FileManager {
         }
     }
 
-    public void load(ArrayList<Vehicle> vehicleList) {
+    public ArrayList<Vehicle> load() {
+        try (BufferedReader br = new BufferedReader(new FileReader(vehicleListFile))){
+            ArrayList<String> stringList = new ArrayList<String>();
+            ArrayList<Vehicle> vehicleList = new ArrayList<Vehicle>();
+            String strLine;
+            while ((strLine = br.readLine()) != null) {
+                int start = strLine.lastIndexOf(" ");
+                int end = strLine.indexOf(",");
+
+                if (start != -1 && end != -1) {
+                    String property = strLine.substring(start+1, end);
+                    stringList.add(property);
+                }
+            }
+
+            for (String string : stringList) {
+                System.out.println(string + "\n");
+            }
+
+
+        } catch (IOException ex) {
+            System.out.println("ERROR: " + ex.getMessage());
+        }
 
     }
 }
