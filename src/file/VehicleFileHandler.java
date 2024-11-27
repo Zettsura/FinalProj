@@ -63,7 +63,7 @@ public class VehicleFileHandler extends FileManager {
             }
 
             for (String string : stringList) {
-                System.out.println(string + "\n");
+                System.out.println(string);
             }
 
 
