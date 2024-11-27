@@ -71,5 +71,6 @@ public class VehicleFileHandler extends FileManager {
             System.out.println("ERROR: " + ex.getMessage());
         }
 
+        return null;
     }
 }
