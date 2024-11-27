@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import vehicle.*;
 
 public class Rent {
-    private ArrayList<Vehicle> vehicleList = new ArrayList<>();
-    private ArrayList<Vehicle> rentedVehicleList = new ArrayList<>();
+    public ArrayList<Vehicle> vehicleList = new ArrayList<>();
     public java.time.LocalTime dateRented = java.time.LocalTime.now();
 
     public void mileageLim(float miles){
@@ -14,7 +13,6 @@ public class Rent {
     }
 
     public void calcPay(float miles){
-
 
     }
 
