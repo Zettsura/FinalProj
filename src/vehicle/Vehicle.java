@@ -18,6 +18,21 @@ public class Vehicle {
     public static float basePrice;
     public static boolean isRented;
 
+    public Vehicle() {
+    }
+
+    public Vehicle(long vehicleId, String carModel, String carType, String color, String fuelType, boolean isAutomatic, int modelId, int passLim, float mileageLim) {
+        this.vehicleId = vehicleId;
+        this.carModel = carModel;
+        this.carType = carType;
+        this.color = color;
+        this.fuelType = fuelType;
+        this.isAutomatic = isAutomatic;
+        this.modelId = modelId;
+        this.passLim = passLim;
+        this.mileageLim = mileageLim;
+    }
+
     public long getVehicleId() {
         return vehicleId;
     }
