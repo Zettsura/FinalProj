@@ -23,8 +23,8 @@ public class Rent {
             return false;
     }
 
-    public float getTotalPay(){
-        float pay = 0;
+    public double getTotalPay(){
+        double pay = 0;
 
         return pay;
     }

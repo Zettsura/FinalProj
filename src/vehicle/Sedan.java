@@ -1,6 +1,8 @@
 package vehicle;
 
-public class Sedan extends Vehicle implements rent{
+import java.util.Objects;
+
+public class Sedan extends Vehicle implements rent, payment{
     public boolean offRoadCap;
 
     public Sedan(long vehicleId, String carModel, String carType, String color, String fuelType, boolean isAutomatic, int modelId, int passLim, float mileageLim, boolean offRoadCap) {
@@ -13,9 +15,11 @@ public class Sedan extends Vehicle implements rent{
     }
 
     @Override
-    public void calcRent(float basePrice) {
-        basePrice = 20000.1f;
+    public void calcRent(double basePrice) {
+        basePrice = 20000.1;
 
+        if (!Objects.equals(getColor(), "Black") || !Objects.equals(getColor(), "Blue"))
+            basePrice *= 1.03;
 
     }
 }

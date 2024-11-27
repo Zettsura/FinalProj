@@ -1,21 +1,23 @@
 package vehicle;
+interface payment{
 
+}
 interface rent{
-    public void calcRent(float basePrice);
+    public void calcRent(double basePrice);
 }
 
 
 public class Vehicle {
-    public long vehicleId; // Id ng shop
-    public String carModel; //brand
-    public String carType; //suv, electric, etc
-    public String color;
+    public long vehicleId;      // Id ng shop
+    public String carModel;     //brand
+    public String carType;      //suv, electric, etc
+    public String color;        // Red, White, Blue, Yellow, Black, Pink, Green
     public String fuelType;
     public boolean isAutomatic;
     public int modelId;
     public int passLim;
-    public float mileageLim;
-    public static float basePrice;
+    public double mileageLim;
+    public static double basePrice;
     public static boolean isRented;
 
     public Vehicle() {
@@ -97,15 +99,15 @@ public class Vehicle {
         this.passLim = passLim;
     }
 
-    public float getMileageLim() {
+    public double getMileageLim() {
         return mileageLim;
     }
 
-    public void setMileageLim(float mileageLim) {
+    public void setMileageLim(double mileageLim) {
         this.mileageLim = mileageLim;
     }
 
-    public float getBasePrice() {
+    public double getBasePrice() {
         return basePrice;
     }
 
@@ -119,13 +121,13 @@ public class Vehicle {
 }
 
 //class Electric extends Vehicle implements rent{
-//    public float batteryCap;
-//    public float chargeTime;
+//    public double batteryCap;
+//    public double chargeTime;
 //}
 //
 //class pickUpTruck extends Vehicle implements rent{
-//    public float towingCap;
-//    public float truckBedCap;
+//    public double towingCap;
+//    public double truckBedCap;
 //    public int torque;
 //    public int storageLim;
 //}
